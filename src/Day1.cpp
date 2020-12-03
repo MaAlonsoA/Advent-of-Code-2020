@@ -1,5 +1,7 @@
 #include "Day1.h"
-std::set<int> loadData() {
+
+
+std::set<int> loadData1() {
 	std::set<int> returSet;
 	std::ifstream inputFile("./src/inputs/day1.txt");
 	if (inputFile.is_open()) {
@@ -14,8 +16,8 @@ std::set<int> loadData() {
 	return returSet;
 }
 
-int day1(int expectedSum) {
-	std::set<int> dataSet{ loadData() };
+int run1(int expectedSum) {
+	std::set<int> dataSet{ loadData1() };
 
 	int searchedNumber{ 0 };
 	for (auto elem : dataSet) {
