@@ -27,7 +27,7 @@ std::vector<Password> loadData2() {
 			chop2(returnVector, data);
 		}
 	} else {
-		throw std::string{ "day1.txt could not be opened" };
+		throw std::string{ "day2.txt could not be opened" };
 	}
 	return returnVector;
 }
