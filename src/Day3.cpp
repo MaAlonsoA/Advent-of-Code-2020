@@ -17,7 +17,6 @@ std::vector<std::string> loadData3() {
 	return returnVector;
 }
 
-
 int slopes(int right, int down, const std::vector<std::string>& dataSet) {
 	int count{ 0 };
 	int place{ 0 };
@@ -47,5 +46,3 @@ std::array<long long, 2> run3() {
 	returnArray.at(1) = result;
 	return returnArray;
 }
-
-
