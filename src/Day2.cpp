@@ -3,7 +3,6 @@
 
 void chop2(std::vector<Password>& dataSet, const std::string& rawData) {
 	Password tempPassword;
-	std::string gg;
 	
 	unsigned firstPos{ rawData.find("-") }; 
 	unsigned secondPos{ rawData.find(" ") }; //find first space
