@@ -1,10 +1,9 @@
 #include "Day2.h"
 
-
 void chop2(std::vector<Password>& dataSet, const std::string& rawData) {
 	Password tempPassword;
-	
-	unsigned firstPos{ rawData.find("-") }; 
+
+	unsigned firstPos{ rawData.find("-") };
 	unsigned secondPos{ rawData.find(" ") }; //find first space
 	unsigned thirdPos{ rawData.find(" ", secondPos + 1) };  //find second space
 
@@ -32,7 +31,6 @@ std::vector<Password> loadData2() {
 	return returnVector;
 }
 
-
 std::array<int, 2> run2() {
 	std::array<int, 2> returnArray;
 	std::vector<Password> dataSet{ loadData2() };
@@ -40,7 +38,7 @@ std::array<int, 2> run2() {
 	int total{ 0 };
 	int total2{ 0 };
 	for (auto& elem : dataSet) {
-		times = std::count(elem.strPass.begin(), elem.strPass.end(), elem.findChar );
+		times = std::count(elem.strPass.begin(), elem.strPass.end(), elem.findChar);
 		if (times >= elem.min && times <= elem.max) {
 			total++;
 		}
@@ -55,4 +53,3 @@ std::array<int, 2> run2() {
 
 	return returnArray;
 };
-
