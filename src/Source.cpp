@@ -2,6 +2,7 @@
 
 #include "Day1.h"
 #include "Day2.h"
+#include "Day3.h"
 
 int main() {
 	try {
@@ -15,7 +16,11 @@ int main() {
 	} catch (const std::string& errorMsg) {
 		std::cout << errorMsg;
 	}
-
+	try {
+		std::cout << "Day 3 solution: " << run3() << "\n";
+	} catch (const std::string& errorMsg) {
+		std::cout << errorMsg;
+	}
 
 	return 0;
 }
