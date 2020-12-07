@@ -13,9 +13,22 @@ struct Passport {
 	std::shared_ptr<std::string> ecl;
 	std::shared_ptr<std::string> pid;
 	std::shared_ptr<std::string> cid;
+
+	void setAttribute(const std::string& key, const std::string& value);
+	bool validByr() const;
+	bool validIyr() const;
+	bool validEyr() const;
+	bool validHgt() const;
+	bool validHcl() const;
+	bool validEcl() const;
+	bool validPid() const;
+
+	bool isValid() const;
 };
 
-void chop4(std::vector<Passport>& dataSet, const std::string& rawData);
-std::vector<Passport> loadData4();
-int run4();
+void chop4(std::vector<Passport>& dataSet, const std::vector<std::string>& rawData);
+void chop4(Passport& object, const std::string_view& rawData);
 
+std::vector<Passport> loadData4();
+
+int run4();
