@@ -36,5 +36,13 @@ std::array<int, 2> run5() {
 	std::array<int, 2> returnArray{ 0 , 0 };
 	std::set<int> dataSet{ loadData5() };
 	returnArray.at(0) = *dataSet.rbegin();
+	int expected{ *dataSet.begin() };
+	for (auto elem : dataSet) {
+		if (elem != expected) {
+			returnArray.at(1) = elem - 1;
+			break;
+		}
+		expected++;
+	}
 	return returnArray;
 }
