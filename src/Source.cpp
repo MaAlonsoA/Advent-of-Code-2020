@@ -24,7 +24,8 @@ int main() {
 		std::cout << errorMsg;
 	}
 	try {
-		std::cout << "Day 4 solution: " << run4() << "\n";
+		std::cout << "Day 4 solution: " << run4().at(0) << "\n";
+		std::cout << "Day 4 second solution: " << run4().at(1) << "\n";
 	} catch (const std::string& errorMsg) {
 		std::cout << errorMsg;
 	}

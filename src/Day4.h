@@ -3,7 +3,7 @@
 #include <string>
 #include <memory>
 #include <vector>
-
+#include <array>
 struct Passport {
 	std::shared_ptr<std::string> byr;
 	std::shared_ptr<std::string> iyr;
@@ -23,7 +23,8 @@ struct Passport {
 	bool validEcl() const;
 	bool validPid() const;
 
-	bool isValid() const;
+	bool isValid1() const;
+	bool isValid2() const;
 };
 
 void chop4(std::vector<Passport>& dataSet, const std::vector<std::string>& rawData);
@@ -31,4 +32,4 @@ void chop4(Passport& object, const std::string_view& rawData);
 
 std::vector<Passport> loadData4();
 
-int run4();
+std::array<int, 2> run4();
