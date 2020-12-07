@@ -21,13 +21,11 @@ void chop4(std::vector<Passport>& dataSet, const std::vector<std::string>& rawDa
 			} else {
 				auxWord = elem.substr(end + 1);
 			}
-			std::cout << auxWord << "\n";
 			chop4(auxPassport, auxWord);
 			end = elem.find(" ", end + 1);
 		}
 	}
 	dataSet.push_back(auxPassport);
-	std::cout << "\n\n\n\n";
 }
 
 std::vector<Passport> loadData4() {
