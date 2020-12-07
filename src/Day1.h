@@ -2,6 +2,7 @@
 #include <set>
 #include <fstream>
 #include <iostream>
+#include <array>
 
 std::set<int> loadData1();
-int run1(int expectedSum);
+std::array<int, 2> run1(int expectedSum);

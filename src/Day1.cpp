@@ -15,15 +15,27 @@ std::set<int> loadData1() {
 	return returSet;
 }
 
-int run1(int expectedSum) {
+std::array<int, 2> run1(int expectedSum) {
+	std::array<int, 2> returnArray{ 0,0 };
 	std::set<int> dataSet{ loadData1() };
+	int result{ 0 };
 
 	int searchedNumber{ 0 };
 	for (auto elem : dataSet) {
 		searchedNumber = expectedSum - elem;
 		if (dataSet.find(searchedNumber) != dataSet.end()) {
-			return searchedNumber * elem;
+			returnArray.at(0) = searchedNumber * elem;
+			break;
 		}
 	}
-	return -1;
+	for (auto elem : dataSet) {
+		for (auto elem2 : dataSet) {
+			searchedNumber = expectedSum - elem - elem2;
+			if (dataSet.find(searchedNumber) != dataSet.end()) {
+				returnArray.at(1) = searchedNumber * elem * elem2;
+				break;
+			}
+		}
+	}
+	return returnArray;
 }
