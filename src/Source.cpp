@@ -5,7 +5,7 @@
 #include "Day3.h"
 #include "Day4.h"
 #include "Day5.h"
-
+#include "Day6.h"
 int main() {
 	// 	try {
 	// 		std::cout << "Day 1 solution: " << run1(2020).at(0) << "\n";
@@ -32,8 +32,14 @@ int main() {
 	// 		std::cout << errorMsg;
 	// 	}
 
-	std::cout << "Day 4 solution: " << run5().at(0) << "\n";
-	std::cout << "Day 4 second solution: " << run5().at(1) << "\n";
+// 	std::cout << "Day 4 solution: " << run5().at(0) << "\n";
+// 	std::cout << "Day 4 second solution: " << run5().at(1) << "\n";
+	try {
+		std::array <int, 2> day6{ run6() };
+		std::cout << "Day 6 solution: " << day6.at(0) << "\n";
+		std::cout << "Day 6 second solution: " << day6.at(1) << "\n";
+	} catch (const std::string& msg) {
+		std::cout << msg;
+	}
 
-	return 0;
 }
