@@ -41,5 +41,4 @@ int main() {
 	} catch (const std::string& msg) {
 		std::cout << msg;
 	}
-
 }
